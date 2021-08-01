@@ -129,15 +129,22 @@ public class PhoneNumberValidator {
 			sc.nextLine();
 			
 			switch(input) {
+				// Not finished; wants to check another number
 				case "y":
 				case "yes":
 					validInput = true;
-					done = true;
+					done = false;
 					break;
+				
+				// Finished; doesn't want to check another number
 				case "n":
 				case "no":
 					validInput = true;
-					done = false;
+					done = true;
+					
+					// Goodbye message
+					System.out.println("Have a nice day!");
+					
 					break;
 				default:
 					validInput = false;
